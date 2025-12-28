@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export const Sponsors = () => (
   <table className="border-collapse">
@@ -19,7 +19,11 @@ export const Sponsors = () => (
           </a>
         </td>
         <td className="border-2 border-gray-300 p-3">
-          <a href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025" target="_blank" rel="noopener">
+          <a
+            href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
+            target="_blank"
+            rel="noopener"
+          >
             <Image
               src="/assets/images/coderabbit-logo-light.svg"
               alt="CodeRabbit"
@@ -65,7 +69,11 @@ export const Sponsors = () => (
           </a>
         </td>
         <td className="border-2 border-gray-300 p-3">
-          <a href="https://l.crowdin.com/next-js" target="_blank" rel="noopener">
+          <a
+            href="https://l.crowdin.com/next-js"
+            target="_blank"
+            rel="noopener"
+          >
             <Image
               src="/assets/images/crowdin-dark.png"
               alt="Crowdin"

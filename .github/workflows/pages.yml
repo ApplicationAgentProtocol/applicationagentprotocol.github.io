@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Required by GitHub Pages deployments via Actions.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+env:
+  # Tell Next.js config we're building for GitHub Pages static hosting.
+  GITHUB_PAGES: "true"
+  # For https://applicationagentprotocol.github.io (user/org pages), this should be empty.
+  # If you ever deploy as a project page (https://<user>.github.io/<repo>/), set this to "/<repo>".
+  GITHUB_PAGES_BASE_PATH: ""
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      # Optional: disable Sentry upload in CI builds unless you explicitly want it.
+      - name: Build (Next.js static export)
+        env:
+          NEXT_PUBLIC_SENTRY_DISABLED: "true"
+        run: bun run build:next
+
+      # With `output: "export"`, Next.js produces the `out/` directory.
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

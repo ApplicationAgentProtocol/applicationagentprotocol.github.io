@@ -1,8 +1,8 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
-import { DemoBanner } from '@/components/DemoBanner';
-import { LocaleSwitcher } from '@/components/LocaleSwitcher';
-import { BaseTemplate } from '@/templates/BaseTemplate';
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import Link from "next/link";
+import { DemoBanner } from "@/components/DemoBanner";
+import { LocaleSwitcher } from "@/components/LocaleSwitcher";
+import { BaseTemplate } from "@/templates/BaseTemplate";
 
 export default async function Layout(props: {
   children: React.ReactNode;
@@ -12,21 +12,21 @@ export default async function Layout(props: {
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,
-    namespace: 'RootLayout',
+    namespace: "RootLayout",
   });
 
   return (
     <>
       <DemoBanner />
       <BaseTemplate
-        leftNav={(
+        leftNav={
           <>
             <li>
               <Link
                 href="/"
                 className="rounded-lg px-2 py-1 text-zinc-200 transition hover:bg-white/5 hover:text-white"
               >
-                {t('home_link')}
+                {t("home_link")}
               </Link>
             </li>
             <li>
@@ -34,7 +34,7 @@ export default async function Layout(props: {
                 href="/about/"
                 className="rounded-lg px-2 py-1 text-zinc-200 transition hover:bg-white/5 hover:text-white"
               >
-                {t('about_link')}
+                {t("about_link")}
               </Link>
             </li>
             <li>
@@ -42,7 +42,7 @@ export default async function Layout(props: {
                 href="/counter/"
                 className="rounded-lg px-2 py-1 text-zinc-200 transition hover:bg-white/5 hover:text-white"
               >
-                {t('counter_link')}
+                {t("counter_link")}
               </Link>
             </li>
             <li>
@@ -50,7 +50,7 @@ export default async function Layout(props: {
                 href="/portfolio/"
                 className="rounded-lg px-2 py-1 text-zinc-200 transition hover:bg-white/5 hover:text-white"
               >
-                {t('portfolio_link')}
+                {t("portfolio_link")}
               </Link>
             </li>
             <li>
@@ -62,15 +62,15 @@ export default async function Layout(props: {
               </a>
             </li>
           </>
-        )}
-        rightNav={(
+        }
+        rightNav={
           <>
             <li>
               <Link
                 href="/sign-in/"
                 className="rounded-lg px-2 py-1 text-zinc-200 transition hover:bg-white/5 hover:text-white"
               >
-                {t('sign_in_link')}
+                {t("sign_in_link")}
               </Link>
             </li>
 
@@ -79,7 +79,7 @@ export default async function Layout(props: {
                 href="/sign-up/"
                 className="rounded-lg bg-white px-3 py-1.5 text-zinc-950 transition hover:bg-zinc-100"
               >
-                {t('sign_up_link')}
+                {t("sign_up_link")}
               </Link>
             </li>
 
@@ -89,7 +89,7 @@ export default async function Layout(props: {
               </div>
             </li>
           </>
-        )}
+        }
       >
         <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
       </BaseTemplate>

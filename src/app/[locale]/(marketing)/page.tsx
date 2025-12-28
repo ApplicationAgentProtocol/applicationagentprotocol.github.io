@@ -1,6 +1,6 @@
-import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Link from 'next/link';
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import Link from "next/link";
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -10,12 +10,12 @@ export async function generateMetadata(props: IIndexProps): Promise<Metadata> {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: 'Index',
+    namespace: "Index",
   });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: t("meta_title"),
+    description: t("meta_description"),
   };
 }
 
@@ -39,12 +39,10 @@ export default async function Index(props: IIndexProps) {
         </div>
 
         <h2 className="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">
-          A protocol for building
-          {' '}
+          A protocol for building{" "}
           <span className="bg-gradient-to-r from-cyan-200 via-white to-fuchsia-200 bg-clip-text text-transparent">
             application-native agents
-          </span>
-          {' '}
+          </span>{" "}
           that ship to production.
         </h2>
 
