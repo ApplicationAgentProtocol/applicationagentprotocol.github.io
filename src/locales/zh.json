@@ -1,0 +1,75 @@
+{
+  "RootLayout": {
+    "home_link": "首页",
+    "about_link": "关于",
+    "counter_link": "计数器",
+    "portfolio_link": "示例",
+    "sign_in_link": "登录",
+    "sign_up_link": "注册"
+  },
+  "BaseTemplate": {
+    "description": "面向可落地应用代理的开放协议与参考实现",
+    "made_with": "由 <author></author> 提供模板支持。"
+  },
+  "Index": {
+    "meta_title": "Application Agent Protocol",
+    "meta_description": "面向应用原生智能体的规范优先协议：消息信封、工具调用、事件流与清晰的错误边界，专为生产环境设计。",
+    "sponsors_title": "赞助方"
+  },
+  "Counter": {
+    "meta_title": "演示",
+    "meta_description": "一个用于展示数据库驱动操作的小型演示。",
+    "security_powered_by": "安全、防机器人检测与限流由以下服务提供"
+  },
+  "CounterForm": {
+    "presentation": "The counter is stored in the database and incremented by the value you provide.",
+    "label_increment": "Increment by",
+    "button_increment": "Increment",
+    "error_increment_range": "Value must be between 1 and 3"
+  },
+  "CurrentCount": {
+    "count": "Count: {count}"
+  },
+  "About": {
+    "meta_title": "规范",
+    "meta_description": "协议规范与设计目标。",
+    "about_paragraph": "Application Agent Protocol 定义了应用与智能体运行时之间稳定的契约，让你构建可靠、可观测、可移植的智能体体验。",
+    "translation_powered_by": "翻译由以下平台提供支持"
+  },
+  "Portfolio": {
+    "meta_title": "示例",
+    "meta_description": "浏览基于该协议的示例与参考流程。",
+    "presentation": "探索一组精选示例与参考流程，展示消息信封、工具调用、事件流以及面向生产的错误处理方式。",
+    "portfolio_name": "示例 {name}",
+    "error_reporting_powered_by": "错误上报由以下服务提供支持",
+    "coverage_powered_by": "代码覆盖率由以下服务提供支持"
+  },
+  "PortfolioSlug": {
+    "meta_title": "示例 {slug}",
+    "meta_description": "示例 {slug} 详情",
+    "header": "示例 {slug}",
+    "content": "该示例演示一条完整的协议流程：严格的消息信封、显式工具、事件流，以及结构化失败处理——便于记录、追踪与回放。",
+    "code_review_powered_by": "代码审查由以下服务提供支持"
+  },
+  "SignIn": {
+    "meta_title": "Sign in",
+    "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
+  },
+  "SignUp": {
+    "meta_title": "Sign up",
+    "meta_description": "Effortlessly create an account through our intuitive sign-up process."
+  },
+  "Dashboard": {
+    "meta_title": "Dashboard",
+    "hello_message": "Hello {email}!",
+    "alternative_message": "Need advanced features? Multi-tenancy & Teams, Roles & Permissions, Shadcn UI, End-to-End Typesafety with oRPC, Stripe Payment, Light / Dark mode. Try <url></url>."
+  },
+  "UserProfile": {
+    "meta_title": "User Profile"
+  },
+  "DashboardLayout": {
+    "dashboard_link": "Dashboard",
+    "user_profile_link": "Manage your account",
+    "sign_out": "Sign out"
+  }
+}

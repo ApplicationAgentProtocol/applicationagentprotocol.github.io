@@ -1,0 +1,75 @@
+{
+  "RootLayout": {
+    "home_link": "Home",
+    "about_link": "Spec",
+    "counter_link": "Demo",
+    "portfolio_link": "Examples",
+    "sign_in_link": "Sign in",
+    "sign_up_link": "Sign up"
+  },
+  "BaseTemplate": {
+    "description": "An open protocol and reference implementation for building production-ready application agents.",
+    "made_with": "Made with <author></author>."
+  },
+  "Index": {
+    "meta_title": "Application Agent Protocol",
+    "meta_description": "A spec-first protocol for application-native agents: message envelopes, tool calling, streaming events, and clear error surfaces—built for production.",
+    "sponsors_title": "Sponsors"
+  },
+  "Counter": {
+    "meta_title": "Demo",
+    "meta_description": "A small demo showing database-backed operations.",
+    "security_powered_by": "Security, bot detection and rate limiting powered by"
+  },
+  "CounterForm": {
+    "presentation": "The counter is stored in the database and incremented by the value you provide.",
+    "label_increment": "Increment by",
+    "button_increment": "Increment",
+    "error_increment_range": "Value must be between 1 and 3"
+  },
+  "CurrentCount": {
+    "count": "Count: {count}"
+  },
+  "About": {
+    "meta_title": "Spec",
+    "meta_description": "Protocol specification and design goals.",
+    "about_paragraph": "Application Agent Protocol defines a stable contract between your app and an agent runtime—so you can build reliable, observable, and portable agent experiences.",
+    "translation_powered_by": "Translation powered by"
+  },
+  "Portfolio": {
+    "meta_title": "Examples",
+    "meta_description": "Browse examples and reference flows built on the protocol.",
+    "presentation": "Explore a curated set of examples and reference flows that demonstrate envelopes, tool calling, streaming events, and production-grade error handling.",
+    "portfolio_name": "Example {name}",
+    "error_reporting_powered_by": "Error reporting powered by",
+    "coverage_powered_by": "Code coverage powered by"
+  },
+  "PortfolioSlug": {
+    "meta_title": "Example {slug}",
+    "meta_description": "Example {slug} details",
+    "header": "Example {slug}",
+    "content": "This example demonstrates a complete protocol flow: strict envelopes, explicit tools, streamed events, and structured failure handling—designed to be logged, traced, and replayed.",
+    "code_review_powered_by": "Code review powered by"
+  },
+  "SignIn": {
+    "meta_title": "Sign in",
+    "meta_description": "Sign in to access protected demo areas."
+  },
+  "SignUp": {
+    "meta_title": "Sign up",
+    "meta_description": "Create an account to access protected demo areas."
+  },
+  "Dashboard": {
+    "meta_title": "Dashboard",
+    "hello_message": "Hello {email}!",
+    "alternative_message": "Need advanced features? Multi-tenancy & Teams, Roles & Permissions, Shadcn UI, End-to-End Typesafety with oRPC, Stripe Payment, Light / Dark mode. Try <url></url>."
+  },
+  "UserProfile": {
+    "meta_title": "User Profile"
+  },
+  "DashboardLayout": {
+    "dashboard_link": "Dashboard",
+    "user_profile_link": "Manage your account",
+    "sign_out": "Sign out"
+  }
+}
